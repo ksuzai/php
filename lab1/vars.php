@@ -18,11 +18,10 @@ $age = 19;
 	<p>Тип переменной name: <?= gettype($name) ?><br></p>
 	<p>Тип переменной age: <?= gettype($age) ?><br></p>
 
-	?> 
 </body>
 </html>
 
 <?php
 	unset($name);
 	unset($age);
-	?>
+?>
