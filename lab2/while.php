@@ -13,7 +13,7 @@
 
 	$i = 0;
 	while ($i < mb_strlen($var, 'UTF-8')) {
-	    echo $var[$i] . "<br>";
+	    echo mb_substr($var, $i, 1, 'UTF-8') . "<br>";
 	    $i++;
 	}
 	?>
