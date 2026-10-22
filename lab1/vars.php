@@ -12,15 +12,17 @@ $age = 19;
 </head>
 <body>
 	<h1>Переменные и вывод</h1>
-	<?php
-	echo "Меня зовут: $name<br>";
-	echo "Мне: $age лет<br>";
-	echo "Тип переменной: $name: " . gettype($name) . "<br>";
-	echo "Тип переменной: $age: " . gettype($age) . "<br>";
-	
-	unset($name);
-	unset($age);
+
+	<p>Меня зовут: <?= $name ?><br></p>
+	<p>Мне: <?= $age ?> лет<br></p>
+	<p>Тип переменной name: <?= gettype($name) ?><br></p>
+	<p>Тип переменной age: <?= gettype($age) ?><br></p>
 
 	?> 
 </body>
 </html>
+
+<?php
+	unset($name);
+	unset($age);
+	?>
