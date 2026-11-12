@@ -12,6 +12,14 @@ function formatConstantValue(mixed $value): string
 	if ($value === null) {
 		return 'null';
 	}
+	if (is_float($value)) {
+		if (is_nan($value)) {
+			return 'NAN';
+		}
+		if (is_infinite($value)) {
+			return $value > 0 ? 'INF' : '-INF';
+		}
+	}
 	return (string)$value;
 }
 
