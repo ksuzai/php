@@ -40,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <form method="post" action="<?=htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8')?>">
 	<label>Количество колонок: </label>
 	<br>
-	<input name="cols" type="text" value="<?=htmlspecialchars((string)$cols, ENT_QUOTES, 'UTF-8')?>">
+	<input name="cols" type="number" min="1" step="1" required value="<?=htmlspecialchars((string)$cols, ENT_QUOTES, 'UTF-8')?>">
 	<br>
 	<label>Количество строк: </label>
 	<br>
-	<input name="rows" type="text" value="<?=htmlspecialchars((string)$rows, ENT_QUOTES, 'UTF-8')?>">
+	<input name="rows" type="number" min="1" step="1" required value="<?=htmlspecialchars((string)$rows, ENT_QUOTES, 'UTF-8')?>">
 	<br>
 	<label>Цвет: </label>
 	<br>
